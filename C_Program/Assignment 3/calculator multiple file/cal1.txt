@@ -1,0 +1,56 @@
+# 1 "cal1.c"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "cal1.c"
+
+
+
+
+
+
+
+int main()
+{
+ char arr[3];
+ do
+ {
+
+
+
+
+ system("clear");
+
+ printf("Calculator\n");
+ printf("Press 'e' for exit\n");
+ scanf("%s",&arr);
+ if(arr[0]=='e')
+ {
+  return 0;
+ }
+ switch(arr[1])
+ {
+  case '+': clrcalexit();
+    add(arr);
+   sleep(2);
+   break;
+  case '-':clrcalexit();
+   printf("%s = %d\n",arr,(int)(arr[0]-'0') - (int)(arr[2]-'0'));
+   sleep(2);
+   break;
+  case '*':clrcalexit();
+   printf("%s = %d\n",arr,(int)(arr[0]-'0') * (int)(arr[2]-'0'));
+   sleep(2);
+   break;
+  case '/':clrcalexit();
+   printf("%s = %.2f\n",arr,(float)(arr[0]-'0') / (float)(arr[2]-'0'));
+   sleep(2);
+   break;
+  case '%':clrcalexit();
+   printf("%s = %d\n",arr,(int)(arr[0]-'0') % (int)(arr[2]-'0'));
+   sleep(2);
+   break;
+  default:printf("Invalid Operator\n");
+ }
+ }while(1);
+ return 0;
+}
